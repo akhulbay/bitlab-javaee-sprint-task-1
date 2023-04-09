@@ -2,7 +2,6 @@ package com.example.sprinttaskee1.servlet;
 
 import com.example.sprinttaskee1.db.DBManager;
 import com.example.sprinttaskee1.entity.Task;
-import com.example.sprinttaskee1.util.StringUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,7 +18,7 @@ public class AddTaskServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        String deadline = StringUtil.changeFormat(request.getParameter("deadline"));
+        String deadline = request.getParameter("deadline");
 
         DBManager.addTask(new Task(null, name, description, deadline, false));
 

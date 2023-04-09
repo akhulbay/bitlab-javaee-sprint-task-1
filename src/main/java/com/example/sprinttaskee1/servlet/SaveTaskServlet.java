@@ -2,7 +2,6 @@ package com.example.sprinttaskee1.servlet;
 
 import com.example.sprinttaskee1.db.DBManager;
 import com.example.sprinttaskee1.entity.Task;
-import com.example.sprinttaskee1.util.StringUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

@@ -22,17 +22,17 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Наименование</label>
                 <input type="text" class="form-control"
-                       placeholder="Наименование" value="<%=task.getName()%>">
+                       placeholder="Наименование" value="<%=task.getName()%>" readonly>
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Описание</label>
                 <textarea class="form-control" rows="6"
-                          placeholder="Описание"><%=task.getDescription()%></textarea>
+                          placeholder="Описание" readonly><%=task.getDescription()%></textarea>
             </div>
             <div class="mb-3">
                 <label for="deadline" class="form-label">Крайний Срок</label>
                 <input type="date" class="form-control"
-                       value="<%=task.getDeadlineDate()%>">
+                       value="<%=task.getDeadlineDate()%>" readonly>
             </div>
             <select class="form-select mb-3" aria-label="Пример выбора по умолчанию">
                 <option value="0" <%=task.isFinished() ? "selected" : null%>>Нет</option>
@@ -40,7 +40,7 @@
             </select>
             <div class="mb-3">
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#updateTask">
-                    Сохранить
+                    Изменить
                 </button>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteTask">
                     Удалить
